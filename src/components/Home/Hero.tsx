@@ -99,6 +99,8 @@ export default function Hero() {
           fontSize="lg"
           className="group"
           id="buy_ticket_btn"
+          type="button"
+          aria-label="buy ticket button"
         >
           <Box
             width="0%"

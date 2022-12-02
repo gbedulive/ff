@@ -4,6 +4,7 @@ import {
   Text,
   Divider,
   HStack,
+  Img,
   Image as ChakraImage,
 } from "@chakra-ui/react";
 import { shimmer, toBase64 } from "@utils/Image";
@@ -12,7 +13,7 @@ import Image from "next/image";
 export default function Offers() {
   return (
     <Box position="relative">
-      <ChakraImage
+      <Img
         src="/images/homepage_divider.png"
         alt="homepage divider"
         width="100vw"

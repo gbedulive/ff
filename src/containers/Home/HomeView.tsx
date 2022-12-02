@@ -37,7 +37,7 @@ export default function HomeView() {
   return (
     <>
       <Box
-        backgroundImage="url('/images/homepage_background.svg')"
+        backgroundImage="url('/images/homepage_background.png')"
         backgroundPosition="top"
         backgroundSize="cover"
         backgroundRepeat="no-repeat"
