@@ -1,4 +1,10 @@
-import { Box, Text, Image, HStack, Link as ChakraLink } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  HStack,
+  Link as ChakraLink,
+  Image as ChakraImage,
+} from "@chakra-ui/react";
 import {
   FaFacebookF,
   FaTwitter,
@@ -8,6 +14,7 @@ import {
   FaDiscord,
 } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
 
 const socials = [
   {
@@ -60,10 +67,12 @@ export default function FooterView() {
             <Box mb={{ base: "2rem", lg: "0rem" }}>
               <Link href="/" passHref>
                 <Image
-                  mx={{ base: "auto", lg: "0" }}
+                  // mx={{ base: "auto", lg: "0" }}
                   src="/images/future_fest_footer_logo.svg"
                   alt="Future Fest Logo"
-                  boxSize={{ base: "100px", lg: "140px" }}
+                  // boxSize={{ base: "100px", lg: "140px" }}
+                  width={140}
+                  height={140}
                 />
               </Link>
               <Text
@@ -95,7 +104,7 @@ export default function FooterView() {
         </Box>
       </Box>
 
-      <Image
+      <ChakraImage
         src="/images/footer_background.png"
         alt=""
         width="100vw"

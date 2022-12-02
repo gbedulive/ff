@@ -4,7 +4,7 @@ import {
   Box,
   HStack,
   VStack,
-  Image,
+  // Image,
   Link as ChakraLink,
   IconButton,
   Drawer,
@@ -16,6 +16,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { BiSearch } from "react-icons/bi";
+import Image from "next/image";
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -27,12 +28,15 @@ export default function Navbar() {
           display="flex"
           alignItems="center"
           flexDirection={{ base: "column", lg: "row" }}
+          py="1.2rem"
         >
           <Link href="/" passHref>
             <Image
               src="/images/future_fest_logo.svg"
               alt="Future Fest Logo"
-              boxSize={{ base: "100px", lg: "140px" }}
+              // boxSize={{ base: "100px", lg: "140px" }}
+              width={150}
+              height={150}
             />
           </Link>
           <Text
