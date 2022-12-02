@@ -65,7 +65,7 @@ export default function HomeView() {
         backgroundPosition="top"
         backgroundSize="cover"
         backgroundRepeat="no-repeat"
-        backgroundColor="#BBDAF0"
+        backgroundColor="#DEE3F2"
       >
         <Navbar />
         <Hero />
