@@ -1,6 +1,20 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
-const FaqView = dynamic(() => import("@containers/Faq/FaqView"));
+import { Center, Spinner } from "@chakra-ui/react";
+
+const FaqView = dynamic(() => import("@containers/Faq/FaqView"), {
+  loading: () => (
+    <Center h="100vh" w="100%">
+      <Spinner
+        thickness="3px"
+        speed="0.65s"
+        emptyColor="#0000005e"
+        color="#A6CDFC"
+        size="xl"
+      />
+    </Center>
+  ),
+});
 
 export default function Faq() {
   return (

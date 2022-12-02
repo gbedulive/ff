@@ -77,10 +77,6 @@ export default function Hero() {
           <Image
             src="/images/homepage_left_photo.png"
             alt="future fest"
-            // width={{
-            //   "2xl": "700px",
-            // }}
-
             placeholder="blur"
             width={700}
             height={700}
