@@ -1,5 +1,7 @@
 import React from "react";
-import { HStack, Box, Heading, Image } from "@chakra-ui/react";
+import { HStack, Box, Heading } from "@chakra-ui/react";
+import { shimmer, toBase64 } from "@utils/Image";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -75,9 +77,18 @@ export default function Hero() {
           <Image
             src="/images/homepage_left_photo.png"
             alt="future fest"
-            width={{
-              "2xl": "700px",
-            }}
+            // width={{
+            //   "2xl": "700px",
+            // }}
+
+            placeholder="blur"
+            width={700}
+            height={700}
+            blurDataURL={`data:image/svg+xml;base64,${toBase64(
+              shimmer(700, 475)
+            )}`}
+            style={{ objectFit: "cover" }}
+            priority
           />
         </Box>
       </HStack>

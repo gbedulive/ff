@@ -4,11 +4,12 @@ import {
   Heading,
   Text,
   VStack,
-  Image,
   Button,
   UnorderedList,
   ListItem,
 } from "@chakra-ui/react";
+import { shimmer, toBase64 } from "@utils/Image";
+import Image from "next/image";
 
 export function ExplorerCard() {
   return (
@@ -36,7 +37,17 @@ export function ExplorerCard() {
           </Box>
 
           <Box>
-            <Image src="/images/daily_pass.png" alt="" />
+            <Image
+              src="/images/daily_pass.png"
+              alt=""
+              width={300}
+              height={100}
+              placeholder="blur"
+              blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                shimmer(700, 475)
+              )}`}
+              priority
+            />
           </Box>
 
           <Box
@@ -108,7 +119,17 @@ export function AdventurerCard() {
           </Box>
 
           <Box>
-            <Image src="/images/all_days_pass.png" alt="" />
+            <Image
+              src="/images/all_days_pass.png"
+              alt=""
+              width={300}
+              height={100}
+              placeholder="blur"
+              blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                shimmer(700, 475)
+              )}`}
+              priority
+            />
           </Box>
 
           <Box
@@ -118,7 +139,7 @@ export function AdventurerCard() {
             w="100%"
           >
             <Heading fontWeight={700} fontSize="3xl">
-              ₦ 30,000
+              ₦ 75,000
             </Heading>
 
             <Button

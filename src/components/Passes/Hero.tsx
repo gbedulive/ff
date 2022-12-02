@@ -1,6 +1,8 @@
 import React from "react";
-import { Box, Image, Heading, Divider } from "@chakra-ui/react";
+import { Box, Heading, Divider } from "@chakra-ui/react";
 import { ExplorerCard, AdventurerCard } from "./PassesCard";
+import { shimmer, toBase64 } from "@utils/Image";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -10,7 +12,15 @@ export default function Hero() {
       mx="auto"
       px={{ base: "1rem", lg: "3rem" }}
     >
-      <Image w="100vw" alt="passes" src="/images/passes_hero_photo.png" />
+      <Image
+        width={2480}
+        alt="passes"
+        src="/images/passes_hero_photo.png"
+        placeholder="blur"
+        height={100}
+        blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
+        priority
+      />
 
       <Heading
         mt="5rem"
