@@ -17,7 +17,7 @@ export default function Hero() {
         alt="passes"
         src="/images/passes_hero_photo.png"
         placeholder="blur"
-        height={100}
+        height={500}
         blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
         priority
       />

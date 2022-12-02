@@ -2,9 +2,9 @@ export const shimmer = (w: any, h: any) => `
 <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <linearGradient id="g">
-      <stop stop-color="#94939360" offset="20%" />
+      <stop stop-color="##bdbdbd60" offset="20%" />
       <stop stop-color="#94939390" offset="50%" />
-      <stop stop-color="#94939360" offset="70%" />
+      <stop stop-color="##bdbdbd60" offset="70%" />
     </linearGradient>
   </defs>
   <rect width="${w}" height="${h}" fill="#a3a3a3" />
