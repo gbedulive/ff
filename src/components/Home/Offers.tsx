@@ -1,10 +1,18 @@
 import React from "react";
-import { Box, Text, Image, Divider, HStack } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  Divider,
+  HStack,
+  Image as ChakraImage,
+} from "@chakra-ui/react";
+import { shimmer, toBase64 } from "@utils/Image";
+import Image from "next/image";
 
 export default function Offers() {
   return (
     <Box position="relative">
-      <Image
+      <ChakraImage
         src="/images/homepage_divider.png"
         alt="homepage divider"
         width="100vw"
@@ -23,13 +31,19 @@ export default function Offers() {
             width={{ base: "100%", lg: "50%" }}
             display="flex"
             justifyContent={{ base: "center", lg: "right" }}
+            position="relative"
           >
             <Image
               src="/images/homepage_left_photo.png"
               alt="future fest"
-              width={{
-                "2xl": "700px",
-              }}
+              placeholder="blur"
+              width={700}
+              height={700}
+              blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                shimmer(700, 475)
+              )}`}
+              style={{ objectFit: "cover" }}
+              priority
             />
           </Box>
           <Box width={{ base: "100%", lg: "50%" }}>
@@ -119,9 +133,14 @@ export default function Offers() {
             <Image
               src="/images/homepage_right_photo.png"
               alt="future fest"
-              width={{
-                "2xl": "700px",
-              }}
+              placeholder="blur"
+              width={700}
+              height={700}
+              blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                shimmer(700, 475)
+              )}`}
+              style={{ objectFit: "cover" }}
+              priority
             />
           </Box>
         </HStack>
