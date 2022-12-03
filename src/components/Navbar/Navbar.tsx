@@ -32,7 +32,8 @@ export default function Navbar() {
         >
           <Link href="/" passHref>
             <Image
-              src="/images/future_fest_logo.svg"
+              src="/images/future_fest_logo.png"
+              // src="/images/future_fest_logo.svg"
               alt="Future Fest Logo"
               // boxSize={{ base: "100px", lg: "140px" }}
               width={150}
