@@ -4,7 +4,6 @@ import {
   Box,
   HStack,
   VStack,
-  // Image,
   Link as ChakraLink,
   IconButton,
   Drawer,
@@ -169,7 +168,7 @@ const routes = [
   },
   {
     label: "Experiences",
-    route: "experience",
+    route: "experiences",
   },
   {
     label: "FAQs",
