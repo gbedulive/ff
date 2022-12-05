@@ -8,7 +8,6 @@ export const experincesData = [
         id: "abcsckn",
         cover_photo: "/images/joeboy.png",
         day: "05",
-
         day_of_week: "THUR",
         time: "9",
         time_type: "AM",
@@ -19,7 +18,6 @@ export const experincesData = [
         id: "abhhncc",
         cover_photo: "/images/fireboy.png",
         day: "05",
-
         day_of_week: "THUR",
         time: "9",
         time_type: "AM",
@@ -30,7 +28,6 @@ export const experincesData = [
         id: "ab0pc",
         cover_photo: "/images/goodgirlla.png",
         day: "05",
-
         day_of_week: "THUR",
         time: "9",
         time_type: "AM",

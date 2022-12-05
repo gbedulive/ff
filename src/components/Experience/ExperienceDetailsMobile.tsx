@@ -90,6 +90,7 @@ export default function ExperienceDetailsMobile({
 
       <Box
         height="40%"
+        // height="260px"
         background="linear-gradient(1.32deg, #AFB3F1 -8.15%, #CCAFF3 98.79%)"
         borderTopRadius="40px"
         position="absolute"
@@ -150,8 +151,8 @@ export default function ExperienceDetailsMobile({
           <Button
             variant="unstyled"
             display="inline-flex"
-            padding="0 1.2rem"
             textDecoration="none"
+            paddingY="1.2rem"
             alignItems="center"
             justifyContent="center"
             overflow="hidden"
