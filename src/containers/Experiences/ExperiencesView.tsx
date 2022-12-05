@@ -8,6 +8,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { BiSearch } from "react-icons/bi";
+import ExperienceDetails from "@components/Experience/ExperienceDetails";
 
 export default function ExperiencesView() {
   return (
@@ -37,7 +38,7 @@ export default function ExperiencesView() {
           />
         </Box>
 
-        <Box marginTop="3rem">
+        <Box marginTop="3rem" paddingBottom="50px">
           <HStack spacing={0} alignItems="flex-start">
             <Box
               width="fit-content"
@@ -142,6 +143,7 @@ export default function ExperiencesView() {
                     "2xl": "1fr 1fr",
                   }}
                   gap="1.5rem"
+                  marginRight="1rem"
                 >
                   <Box
                     borderRadius="20px"
@@ -252,7 +254,12 @@ export default function ExperiencesView() {
                   </Box>
                 </Box>
 
-                <Box display={{ base: "none", lg: "block" }}>OPEN STATE</Box>
+                <Box
+                  display={{ base: "none", lg: "block" }}
+                  width={{ lg: "35%" }}
+                >
+                  <ExperienceDetails />
+                </Box>
               </HStack>
             </Box>
           </HStack>
