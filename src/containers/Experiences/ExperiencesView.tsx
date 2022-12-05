@@ -11,6 +11,7 @@ import { BiSearch } from "react-icons/bi";
 import ExperienceDetails from "@components/Experience/ExperienceDetails";
 import { experincesData } from "@utils/experiences";
 import EventCard from "@components/Experience/EventCard";
+import ExperienceDetailsMobile from "@components/Experience/ExperienceDetailsMobile";
 
 export default function ExperiencesView() {
   const [gridLgCol, setGridLgCol] = useState("1fr 1fr 1fr");
@@ -18,9 +19,11 @@ export default function ExperiencesView() {
   const [detailsDisplay, setDetailsDisplay] = useState("none");
   const [currentDay, setCurrentDay] = useState<any>({});
   const [selectedEvent, setSelectedEvent] = useState<any>();
+  const [detailsMobileDisplay, setDetailsMobileDisplay] = useState("none");
 
   const openDetails = (data: any) => {
     setSelectedEvent(data);
+    setDetailsMobileDisplay("block");
     setDetailsDisplay("block");
     setGridLgCol("1fr 1fr");
     setGridMdCol("1fr");
@@ -28,6 +31,7 @@ export default function ExperiencesView() {
 
   const closeDetails = () => {
     setDetailsDisplay("none");
+    setDetailsMobileDisplay("none");
     setGridLgCol("1fr 1fr 1fr");
     setGridMdCol("1fr 1fr");
   };
@@ -41,7 +45,15 @@ export default function ExperiencesView() {
       minHeight="100vh"
       background="linear-gradient(179.39deg, #E2A9F2 -76.64%, #B1B5F4 93.01%)"
     >
-      <Box maxW="min(100%, 1800px)" mx="auto" px={{ base: "1rem", lg: "3rem" }}>
+      <Box
+        maxW="min(100%, 1800px)"
+        mx="auto"
+        px={{ base: "1rem", lg: "3rem" }}
+        display={{
+          base: detailsMobileDisplay === "none" ? "block" : "none",
+          lg: "block",
+        }}
+      >
         <Box
           display="flex"
           justifyContent="space-between"
@@ -158,6 +170,13 @@ export default function ExperiencesView() {
             </Box>
           </HStack>
         </Box>
+      </Box>
+
+      <Box display={{ base: detailsMobileDisplay, md: "none" }}>
+        <ExperienceDetailsMobile
+          closeDetails={closeDetails}
+          data={selectedEvent}
+        />
       </Box>
     </Box>
   );

@@ -138,6 +138,10 @@ h6 {
   border-radius: 20px;
 }
 
+.slide_in_up {
+  animation: 1s ease-out 0s 1 customRotateInUp1;
+}
+
 @keyframes lineAnim {
   0% {
     left: -40%;
@@ -149,5 +153,14 @@ h6 {
   100% {
     left: 100%;
     width: 100%;
+  }
+}
+
+@keyframes customRotateInUp1 {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }

@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   Text,
@@ -9,12 +8,13 @@ import {
   Link as ChakraLink,
   IconButton,
 } from "@chakra-ui/react";
+import { BsChevronLeft } from "react-icons/bs";
 import { BsClock } from "react-icons/bs";
 import { MdOutlineClear } from "react-icons/md";
 import { TagSvg, MicrophoneSvg } from "@components/Icons/Icons";
 import Link from "next/link";
 
-export default function ExperienceDetails({
+export default function ExperienceDetailsMobile({
   closeDetails,
   data,
 }: {
@@ -22,78 +22,83 @@ export default function ExperienceDetails({
   data: any;
 }) {
   return (
-    <Box
-      width="100%"
-      background="#CAAFF3"
-      borderRadius="20px"
-      boxShadow="xl"
-      className="slide_in_up"
-    >
-      <Box
-        background="gray"
-        width="100%"
-        borderRadius="20px"
-        backgroundImage={`url(${data?.cover_photo})`}
-        height={{ base: "220px", lg: "250px", "2xl": "280px" }}
-        backgroundPosition="top"
-        backgroundSize="cover"
-        backgroundRepeat="no-repeat"
-        padding="0.8rem"
-      >
-        <VStack
+    <Box height="100vh">
+      <Box height="65%">
+        <Box
+          background="gray"
           width="100%"
+          backgroundImage={`url(${data?.cover_photo})`}
+          backgroundPosition="top"
           height="100%"
-          alignItems="flex-end"
-          justifyContent="space-between"
+          backgroundSize="cover"
+          backgroundRepeat="no-repeat"
+          padding="0.8rem"
         >
-          <Box
+          <VStack
             width="100%"
-            display="flex"
+            height="100%"
+            alignItems="flex-end"
             justifyContent="space-between"
-            alignItems="center"
           >
-            <IconButton
-              aria-label="close button"
-              icon={<MdOutlineClear color="#fff" />}
-              background="#11070F90"
-              borderRadius="full"
-              size="sm"
-              _hover={{ background: "#11070F70" }}
-              _active={{ background: "#11070F70" }}
-              onClick={closeDetails}
-            />
-            <Text
-              background="#BDADED"
-              padding="3px 5px"
-              justifyContent="center"
-              color="#ffffff"
-              fontWeight="300"
-              alignItems="center"
+            <Box
+              width="100%"
               display="flex"
-              flexDirection="column"
-              borderRadius="full"
+              justifyContent="space-between"
+              alignItems="center"
             >
-              {data?.day}
-              <Text fontSize="xs" fontWeight={200}>
-                {data?.day_of_week}
+              <IconButton
+                aria-label="close button"
+                icon={<BsChevronLeft color="#fff" size="1.2rem" />}
+                background="#11070F"
+                borderRadius="full"
+                size="sm"
+                _hover={{ background: "#11070F70" }}
+                _active={{ background: "#11070F70" }}
+                onClick={closeDetails}
+              />
+              <Text
+                background="#BDADED"
+                padding="5px 5px"
+                justifyContent="center"
+                color="#ffffff"
+                fontWeight="300"
+                alignItems="center"
+                display="flex"
+                flexDirection="column"
+                borderRadius="full"
+              >
+                {data?.day}
+                <Text fontSize="xs" fontWeight={200}>
+                  {data?.day_of_week}
+                </Text>
               </Text>
-            </Text>
-          </Box>
+            </Box>
 
-          <Box width="100%">
-            <Text
-              color="#fff"
-              fontSize={{ base: "xl", "2xl": "2xl" }}
-              fontWeight="500"
-            >
-              {data?.name}
-            </Text>
-          </Box>
-        </VStack>
+            <Box width="100%" paddingBottom="2.8rem">
+              <Text
+                color="#fff"
+                fontSize="3xl"
+                fontWeight="500"
+                lineHeight="30px"
+              >
+                {data?.name}
+              </Text>
+            </Box>
+          </VStack>
+        </Box>
       </Box>
 
-      <Box width="100%" height="250px" padding="0.8rem">
-        <HStack height="50px">
+      <Box
+        height="40%"
+        background="linear-gradient(1.32deg, #AFB3F1 -8.15%, #CCAFF3 98.79%)"
+        borderTopRadius="40px"
+        position="absolute"
+        bottom="0px"
+        width="100%"
+        className="slide_in_up"
+        padding="0.8rem"
+      >
+        <HStack height="50px" marginTop="1.2rem">
           <Box width="33.3333333333%">
             <Text
               color="#2E5DB6"
@@ -158,7 +163,7 @@ export default function ExperienceDetails({
             type="button"
             color="#030303"
             aria-label="join button"
-            width="150px"
+            width="200px"
             fontWeight="500"
             borderRadius="20px"
           >
