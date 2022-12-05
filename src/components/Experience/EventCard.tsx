@@ -21,6 +21,7 @@ export default function EventCard({
       backgroundRepeat="no-repeat"
       cursor="pointer"
       transition="all 0.7s"
+      backgroundColor="#DEE3F2"
       _hover={{
         transform: "scale(1.03, 1.03)",
       }}
