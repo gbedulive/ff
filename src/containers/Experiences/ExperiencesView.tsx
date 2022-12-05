@@ -30,6 +30,11 @@ export default function ExperiencesView() {
     setGridMdCol("1fr 1fr");
   };
 
+  const navigateDays = (arg: any) => {
+    setCurrentDay((prev: any) => (prev = arg));
+    closeDetails();
+  };
+
   useEffect(() => {
     setCurrentDay(experincesData[0]);
   }, []);
@@ -115,10 +120,7 @@ export default function ExperiencesView() {
                         backgroundColor: "#2E5DB6",
                         transform: "scale(1.1, 1.1)",
                       }}
-                      onClick={() => {
-                        setCurrentDay(item);
-                        closeDetails();
-                      }}
+                      onClick={() => navigateDays(item)}
                       marginBottom="1rem"
                     >
                       {item.day}
