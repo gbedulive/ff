@@ -7,19 +7,27 @@ import {
   VStack,
   Center,
   Link as ChakraLink,
+  IconButton,
 } from "@chakra-ui/react";
 import { BsClock } from "react-icons/bs";
+import { MdOutlineClear } from "react-icons/md";
 import { TagSvg, MicrophoneSvg } from "@components/Icons/Icons";
 import Link from "next/link";
 
-export default function ExperienceDetails() {
+export default function ExperienceDetails({
+  closeDetails,
+  data,
+}: {
+  closeDetails: () => void;
+  data: any;
+}) {
   return (
     <Box width="100%" background="#CAAFF3" borderRadius="20px" boxShadow="xl">
       <Box
         background="gray"
         width="100%"
         borderRadius="20px"
-        backgroundImage='url("/images/joeboy.png")'
+        backgroundImage={`url(${data?.cover_photo})`}
         height={{ base: "220px", lg: "250px", "2xl": "280px" }}
         backgroundPosition="top"
         backgroundSize="cover"
@@ -32,23 +40,39 @@ export default function ExperienceDetails() {
           alignItems="flex-end"
           justifyContent="space-between"
         >
-          <Text
-            background="#BDADED90"
-            padding="3px 5px"
-            justifyContent="center"
-            color="#ffffff"
-            fontWeight="300"
-            alignItems="center"
+          <Box
+            width="100%"
             display="flex"
-            flexDirection="column"
-            borderRadius="full"
-            float="right"
+            justifyContent="space-between"
+            alignItems="center"
           >
-            06
-            <Text fontSize="xs" fontWeight={200}>
-              FRI
+            <IconButton
+              aria-label="close button"
+              icon={<MdOutlineClear color="#fff" />}
+              background="#11070F90"
+              borderRadius="full"
+              size="sm"
+              _hover={{ background: "#11070F70" }}
+              _active={{ background: "#11070F70" }}
+              onClick={closeDetails}
+            />
+            <Text
+              background="#BDADED90"
+              padding="3px 5px"
+              justifyContent="center"
+              color="#ffffff"
+              fontWeight="300"
+              alignItems="center"
+              display="flex"
+              flexDirection="column"
+              borderRadius="full"
+            >
+              {data?.day}
+              <Text fontSize="xs" fontWeight={200}>
+                {data?.day_of_week}
+              </Text>
             </Text>
-          </Text>
+          </Box>
 
           <Box width="100%">
             <Text
@@ -56,7 +80,7 @@ export default function ExperienceDetails() {
               fontSize={{ base: "xl", "2xl": "2xl" }}
               fontWeight="500"
             >
-              JOEBOY LIVE IN CONCERT
+              {data?.name}
             </Text>
           </Box>
         </VStack>
@@ -76,6 +100,7 @@ export default function ExperienceDetails() {
               Music
             </Text>
           </Box>
+
           <Box
             width="33.3333333333%"
             borderLeft="1px solid black"
