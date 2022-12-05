@@ -9,6 +9,7 @@ export default function EventCard({
 }) {
   return (
     <Box
+      className="fade_in"
       borderRadius="20px"
       boxShadow="xl"
       width="100%"

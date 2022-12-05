@@ -142,6 +142,10 @@ h6 {
   animation: 1s ease-out 0s 1 customRotateInUp1;
 }
 
+.fade_in {
+  animation: 1s ease-out 0s 1 customFadeIn;
+}
+
 @keyframes lineAnim {
   0% {
     left: -40%;
@@ -162,5 +166,14 @@ h6 {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+@keyframes customFadeIn {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
   }
 }
