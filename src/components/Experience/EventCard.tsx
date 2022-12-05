@@ -10,14 +10,19 @@ export default function EventCard({
   return (
     <Box
       borderRadius="20px"
-      boxShadow="2xl"
+      boxShadow="xl"
       width="100%"
       height={{ base: "220px", lg: "250px", "2xl": "280px" }}
       backgroundImage={`linear-gradient(180.46deg, rgba(236, 220, 229, 0) 25.17%, #545862 99.59%), url(${data.cover_photo})`}
       backgroundPosition="top"
       backgroundSize="cover"
       padding="0.8rem"
+      backgroundRepeat="no-repeat"
       cursor="pointer"
+      transition="all 0.7s"
+      _hover={{
+        transform: "scale(1.03, 1.03)",
+      }}
       onClick={() => openDetails(data)}
     >
       <VStack

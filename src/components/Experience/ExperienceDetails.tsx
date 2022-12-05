@@ -57,7 +57,7 @@ export default function ExperienceDetails({
               onClick={closeDetails}
             />
             <Text
-              background="#BDADED90"
+              background="#BDADED"
               padding="3px 5px"
               justifyContent="center"
               color="#ffffff"
