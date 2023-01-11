@@ -44,7 +44,7 @@ export default function Navbar() {
             fontWeight="500"
             ml="1.4rem"
             color="#3a3a3a"
-            transform="translateY(-20px)"
+            transform="translateY(-10px)"
           >
             March, 2023
           </Text>
