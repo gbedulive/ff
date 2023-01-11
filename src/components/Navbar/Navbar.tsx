@@ -46,11 +46,11 @@ export default function Navbar() {
             color="#3a3a3a"
             transform="translateY(-20px)"
           >
-            Jan 5 - 7
+            March 2023
           </Text>
         </Box>
 
-        <Box>
+        {/* <Box>
           <Box
             width="35px"
             height="35px"
@@ -113,10 +113,10 @@ export default function Navbar() {
               color="#111115"
             />
           </HStack>
-        </Box>
+        </Box> */}
       </HStack>
 
-      <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
+      {/* <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent minW="100vw" transitionDuration="20000">
           <DrawerCloseButton
@@ -156,7 +156,7 @@ export default function Navbar() {
             </VStack>
           </DrawerBody>
         </DrawerContent>
-      </Drawer>
+      </Drawer> */}
     </Box>
   );
 }

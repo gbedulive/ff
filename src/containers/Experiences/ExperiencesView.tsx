@@ -172,7 +172,7 @@ export default function ExperiencesView() {
         </Box>
       </Box>
 
-      <Box display={{ base: detailsMobileDisplay, lg: "none" }}>
+      <Box display={{ base: detailsMobileDisplay, md: "none" }}>
         <ExperienceDetailsMobile
           closeDetails={closeDetails}
           data={selectedEvent}
