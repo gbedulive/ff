@@ -155,7 +155,7 @@ export default function TempHomeHero() {
                 _groupHover={{ color: "#ffffff" }}
                 transition="all 0.45s ease-Out"
               >
-                Notify Me
+                NOTIFY ME
               </ChakraLink>
               {/* <Text
               _groupHover={{ color: "#ffffff" }}
