@@ -106,7 +106,7 @@ export default function TempHomeHero() {
             mr="5px"
           />
 
-          <Center mt="10px">
+          <Center mt="2rem">
             <Button
               variant="unstyled"
               display="inline-flex"
