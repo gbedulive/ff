@@ -46,7 +46,7 @@ export default function Navbar() {
             color="#3a3a3a"
             transform="translateY(-20px)"
           >
-            March 2023
+            March, 2023
           </Text>
         </Box>
 
