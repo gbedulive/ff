@@ -32,7 +32,7 @@ export default function TempHomeView() {
       >
         <Navbar />
         <Box
-          height={{ base: "calc(100vh - 200px)", md: "calc(100vh - 150px)" }}
+          height={{ base: "calc(100vh - 300px)", md: "calc(100vh - 150px)" }}
         >
           <Center width="100%" height="100%">
             <Box maxW="min(100%, 1800px)" width="1800px">
