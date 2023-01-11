@@ -3,22 +3,22 @@ import {
   Text,
   Box,
   HStack,
-  VStack,
-  Link as ChakraLink,
-  IconButton,
-  Drawer,
-  DrawerBody,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-  useDisclosure,
+  // VStack,
+  // Link as ChakraLink,
+  // IconButton,
+  // Drawer,
+  // DrawerBody,
+  // DrawerOverlay,
+  // DrawerContent,
+  // DrawerCloseButton,
+  // useDisclosure,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import { BiSearch } from "react-icons/bi";
+// import { BiSearch } from "react-icons/bi";
 import Image from "next/image";
 
 export default function Navbar() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  // const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <Box maxW="min(100%, 1800px)" mx="auto" px={{ base: "1rem", lg: "3rem" }}>

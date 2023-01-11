@@ -31,7 +31,13 @@ export default function TempHomeView() {
         height="100%"
       >
         <Navbar />
-        <Hero />
+        <Box height="calc(100vh - 150px)">
+          <Center width="100%" height="100%">
+            <Box maxW="min(100%, 1800px)" width="1800px">
+              <Hero />
+            </Box>
+          </Center>
+        </Box>
       </Box>
     </Box>
   );

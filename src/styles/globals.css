@@ -143,6 +143,12 @@ h6 {
   animation: 1s ease-out 0s 1 customFadeIn;
 }
 
+@media (min-height: 1000px) {
+  #hero_text_heading {
+    font-size: 120px;
+  }
+}
+
 @keyframes lineAnim {
   0% {
     left: -40%;
